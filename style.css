@@ -1,23 +1,56 @@
+/* Mengatur gaya umum untuk latar belakang dan font di seluruh halaman */
 body {
-    background-color: rgb(173, 173, 173);
-    font-family: arial, sans-serif;
-    color: white;
+    background-color: rgb(173, 173, 173); /* Warna latar belakang halaman (abu-abu terang) */
+    font-family: Arial, sans-serif;         /* Jenis huruf yang digunakan */
+    color: white;                           /* Warna teks utama */
 }
 
+/* Mengatur wadah/kartu profil */
 .profil {
-    width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgb(60, 60, 60);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgb(0,0,0,0.1);
+    width: 300px;                           /* Lebar kartu profil */
+    margin: 50px auto;                      /* Posisikan kartu tepat di tengah layar secara horizontal */
+    padding: 20px;                          /* Jarak di dalam kartu (antara tepi kartu dan isinya) */
+    background-color: rgb(60, 60, 60);      /* Warna latar belakang kartu (abu-abu gelap) */
+    border-radius: 15px;                    /* Membuat sudut kartu menjadi melengkung/tumpul */
+    text-align: center;                     /* Mengatur semua teks & tombol di dalam kartu agar di tengah */
+    
+    /* 
+       PERBAIKAN: 
+       Sebelumnya ditulis rgb(0,0,0,0.1). Karena ada nilai transparansi (0.1), 
+       formatnya harus menggunakan 'rgba' (a = alpha/transparansi).
+    */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan halus di balik kartu */
 }
 
+/* Mengatur foto profil di dalam kartu */
 .profil img {
-    width: 150px;
-    border-radius: 50%;
+    width: 150px;                           /* Lebar foto profil */
+    height: 150px;                          /* Tinggi foto profil */
+    object-fit: cover;                      /* Memastikan foto tidak terdistorsi/gepeng */
+    border-radius: 50%;                     /* Membuat foto berbentuk lingkaran sempurna */
 }
 
-.profil {
-    text-align: center;
+/* Mengatur tampilan link/tautan */
+.profil a {
+    color: #4da6ff;                         /* Warna teks link agar lebih kontras dan jelas */
+    text-decoration: none;                  /* Menghilangkan garis bawah pada link */
+}
+
+.profil a:hover {
+    text-decoration: underline;             /* Menampilkan garis bawah saat kursor diarahkan ke link */
+}
+
+/* Mengatur tampilan tombol "Klik aku!" */
+.profil button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008cba;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profil button:hover {
+    background-color: #005f73;             /* Warna tombol berubah sedikit gelap saat disentuh kursor */
 }
